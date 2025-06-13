@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GTAV Modpack Installation Guide</title>
+  <style>
+    :root {
+      --bg: #0f1318;
+      --fg: #e0e0e0;
+      --accent: #3a6ea5;
+      --muted: #7d8a99;
+      --code-bg: #1e242b;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+    h1, h2 {
+      color: var(--accent);
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.3rem; margin-top: 2em; }
+    p, li {
+      font-size: 1rem;
+      margin: 0.6em 0;
+    }
+    ol { padding-left: 1.4rem; margin: 0; }
+    pre {
+      background: var(--code-bg);
+      color: #cfd8dc;
+      padding: 12px 16px;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.95rem;
+      user-select: all;
+      margin: 0.8em 0 1.2em;
+    }
+    code { font-family: "Fira Mono", Consolas, monospace; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid var(--muted);
+    }
+    a:hover { border-bottom-color: var(--accent); }
+    hr {
+      border: none;
+      border-top: 1px solid var(--code-bg);
+      margin: 2em 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>GTAV Modpack Installation Guide</h1>
+    <p><strong>Only for GTAV Legacy.</strong> Works on Steam and Rockstar Launcher.</p>
+
+    <h2>1. Extract the Modpack</h2>
+    <p>Unzip the downloaded modpack to any folder.</p>
+
+    <h2>2. Locate Your GTAV Folder</h2>
+    <p>Steam default:</p>
+    <pre><code>C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V</code></pre>
+    <p>Rockstar default:</p>
+    <pre><code>C:\Program Files\Rockstar Games\Grand Theft Auto V</code></pre>
+
+    <h2>3. Copy Mod Files</h2>
+    <p>Open the extracted <code>WITH GTA.EXE</code> folder and copy its contents into your GTAV folder.</p>
+
+    <h2>4. Install ASI Manager</h2>
+    <ol>
+      <li><a href="https://openiv.com/" target="_blank" rel="noopener">Download OpenIV</a> and install.</li>
+      <li>Launch OpenIV &rarr; select <strong>Grand Theft Auto V (Windows)</strong>.</li>
+      <li>Tools &rarr; ASI Manager &rarr; Install all.</li>
+      <li>Enable <strong>Edit mode</strong> (top-right).</li>
+    </ol>
+
+    <h2>5. Install .OIV Packages</h2>
+    <p>In the modpack folder, open <code>OIV</code> and drag each <code>.oiv</code> file into the OpenIV window. Confirm installation via the Package Installer.</p>
+
+    <h2>6. Install Custom gameconfig.xml</h2>
+    <ol>
+      <li>Download <code>gameconfig.xml</code> from Assets.</li>
+      <li>In OpenIV (Edit mode), navigate to:<br>
+        <pre><code>mods\update\update.rpf\common\data</code></pre>
+      </li>
+      <li>Drag <code>gameconfig.xml</code> here and overwrite (should show only <code>Compressed;</code> and ~89 KB).</li>
+    </ol>
+
+    <h2>7. Adjust Heap Size</h2>
+    <p>Open <code>HeapAdjuster.ini</code> in GTA V folder. Change:</p>
+    <pre><code>heapSizeMB=1024</code></pre>
+    <p>to:</p>
+    <pre><code>heapSizeMB=2048</code></pre>
+
+    <h2>8. Clean Up Mods (Optional)</h2>
+    <p>Place <code>gtavcleaner.exe</code> in your GTAV folder. Run it to remove all mods.</p>
+
+    <hr>
+    <p>For a visual guide, search YouTube: “Install GTAV mods with OpenIV”.</p>
+  </main>
+</body>
+</html>
